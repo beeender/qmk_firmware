@@ -7,7 +7,7 @@ MCU_SERIES = NRF52840
 NRFSDK_ROOT := $(NRFSDK15_ROOT) #Path to nRF SDK v15.0.0
 
 # project specific files
-#SRC =	matrix.c
+SRC =	led.c
 
 # NRF_SEPARATE = master
 #CFLAGS += -DNRF_XTAL_32MHZ

@@ -4,8 +4,10 @@
 #include "app_ble_func.h"
 #include "nrfx_power.h"
 
+void led_init(void );
 
 void matrix_init_user() {
   set_usb_enabled(true);
   debug_enable = true;
+  led_init();
 }

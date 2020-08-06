@@ -20,6 +20,18 @@ void led_init(void)
   nrf_gpio_pin_clear(SCRO_LED_PIN);
 }
 
+void led_function_layer_state(bool s) {
+  if (s) {
+    nrf_gpio_pin_set(NUMS_LED_PIN);
+    nrf_gpio_pin_set(CAPS_LED_PIN);
+    nrf_gpio_pin_set(SCRO_LED_PIN);
+  } else {
+    nrf_gpio_pin_clear(NUMS_LED_PIN);
+    nrf_gpio_pin_clear(CAPS_LED_PIN);
+    nrf_gpio_pin_clear(SCRO_LED_PIN);
+  }
+}
+
 void led_set(uint8_t usb_led)
 {
 	if (usb_led & (1 << USB_LED_NUM_LOCK)) {
